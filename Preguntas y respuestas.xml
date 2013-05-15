@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Test>
+	<pregunta>
+		<enunciado>¿Qué alumbrado llevará encendido una motocicleta durante el día?</enunciado>
+		<respuesta class="Correcta" id="a">El de corto alcance o cruce.</respuesta>
+		<respuesta id="b">El de posición o el de corto alcance.</respuesta>
+		<respuesta id="c">Ninguno</respuesta>
+</pregunta>
+
+	<pregunta>
+		<enunciado>¿Puede realizar un cambio de sentido en un lugar donde esté prohibido adelantar?</enunciado>
+		<respuesta id="a">Sí, excepto entre la puesta y la salida de sol, porque disminuye la visibilidad.</respuesta>
+		<respuesta class="Correcta" id="b">No, salvo que el cambio de sentido esté expresamente autorizado.</respuesta>
+		<respuesta id="c">Sí, cuando la circulación en sentido contrario lo permita.</respuesta>
+	</pregunta>
+	
+	<pregunta>
+		<enunciado>En una autopista conduciendo un camión de 3.000 Kg. de M.M.A., ¿qué distancia es obligatorio dejar con el vehículo que va delante?
+		</enunciado>
+		<respuesta class="Correcta" id="a">100 metros.</respuesta>
+		<respuesta id="b">50 metros.</respuesta>
+		<respuesta id="c">La distancia de seguridad.</respuesta>
+	</pregunta>
+</Test>

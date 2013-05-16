@@ -21,23 +21,28 @@
                     	'<br/> Enunciado: ' + $(arraydatos[i]).find(':first-child').text() +
                              
                     	'<br /> A .- ' + $(arraydatos[i]).find('#a').text() + 
-                    	'<input class="respuestaA" name="sample" type="radio" />' +
-                    
-                        '<br /> B .- ' + $(arraydatos[i]).find('#b').text() + 
-						'<input class="respuestaB" name="sample" type="radio" />' + 
-                    
+                    	'<input id='+ $(arraydatos[i]).find('#a').attr("class") +' name="sample" type="radio" />' + //Con el atributo class captamos el valor de dicho atributo 
+                                                                                                                       //directamente de la etiqueta correspondiente en el XML
+                        '<br /> B .- ' + $(arraydatos[i]).find('#b').text() +                                          //facilitando así la tarea posterior de contar las respuestas correctas
+						'<input class='+ $(arraydatos[i]).find('#b').attr("class") +' name="sample" type="radio" />' + 
+                                        
                         '<br /> C .- ' + $(arraydatos[i]).find('#c').text() +
-                		'<input class="respuestaC" name="sample" type="radio" />' + '</p>');
-                        
-                       
+                		'<input class='+ $(arraydatos[i]).find('#c').attr("class") +' name="sample" type="radio" />' + '</p>');
             	};
                     
             };
 
+            //Este trozo de código no hace lo que debería. Capturar el valor del atributo class.
+
             $("#Submit").click(function() {
-             alert($('input[name=sample]:checked').val())
-            });
-        });
+             
+             var resultado = $('input[name=sample]:checked').val();
+             
+             if (resultado == 'on') {
+                alert($("#a").val())
+                };
+             });
+});
 
 
 

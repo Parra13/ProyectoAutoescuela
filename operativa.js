@@ -37,11 +37,11 @@
 
     $("#Submit").click(function() {
 
-        for (var i = 0; i < 3 ; i++) {
+        for (var i = 1; i < 4 ; i++) {
                     
-            var resultadoA = $('input[name="Pregunta'+i+'"]:checked').val(); /*Captura el atributo checked del radio button de nombre RespA*/
-            var resultadoB = $('input[name="Pregunta'+i+'"]:checked').val(); /*Captura el atributo checked del radio button de nombre RespB*/
-            var resultadoC = $('input[name="Pregunta'+i+'"]:checked').val(); /*Captura el atributo checked del radio button de nombre RespC*/
+            var resultadoA = $('#A[name=Pregunta'+i+']:checked').val(); /*Captura el atributo checked del radio button de nombre RespA*/
+            var resultadoB = $('#B[name=Pregunta'+i+']:checked').val(); /*Captura el atributo checked del radio button de nombre RespB*/
+            var resultadoC = $('#C[name=Pregunta'+i+']:checked').val(); /*Captura el atributo checked del radio button de nombre RespC*/
 
             if (resultadoA == 'on') {      //Si el valor capturado en la variable antes declarada es "on" se realiza el código dentro de llaves.
                 alert($("#A").attr("class"))

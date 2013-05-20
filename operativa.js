@@ -15,13 +15,16 @@
         arraydatos = $(document).find("pregunta");
         var h = 1;
         
-        for (var i = 0; i < arraydatos.length; i++) {
-            
+        for (var u = 0; u < arraydatos.length; u++) {
+        
+        i = Math.floor(Math.random() * (2 + 1));
+
+
             $("#content").append(
                 
                 '<div id="Pregunta'+ h +'">' +
                 
-                '<b>Pregunta '+h+'</b>' + '</p>' +
+                '<b>Pregunta '+h+'</b>' +
 
                	'<br/> Enunciado: ' + $(arraydatos[i]).find(':first-child').text() +
                              
@@ -45,13 +48,13 @@
 
         for (var i = 1; i <= arraydatos.length ; i++) { 
             /* Captura en una variable si el atributo está "on" */       
-            var resultadoA = $('#A[name=Pregunta'+i+']:checked').val(); /*Captura si el atributo checked del radio button de nombre Pregunta + nº está activado*/
-            var resultadoB = $('#B[name=Pregunta'+i+']:checked').val(); /*Captura si el atributo checked del radio button de nombre Pregunta + nº está activado*/
-            var resultadoC = $('#C[name=Pregunta'+i+']:checked').val(); /*Captura si el atributo checked del radio button de nombre Pregunta + nº está activado*/
+            var resultadoA = $('#A[name=Pregunta'+i+']:checked').val(); /*Captura si el atributo checked del radio button, con su "id" correspondiente y nombre Pregunta + nº, está activado*/
+            var resultadoB = $('#B[name=Pregunta'+i+']:checked').val(); /*Captura si el atributo checked del radio button, con su "id" correspondiente y nombre Pregunta + nº, está activado*/
+            var resultadoC = $('#C[name=Pregunta'+i+']:checked').val(); /*Captura si el atributo checked del radio button, con su "id" correspondiente y nombre Pregunta + nº, está activado*/
 
             if (resultadoA == 'on') {      //Si el valor capturado en la variable antes declarada es "on" se realiza el código dentro de llaves.
                     
-                var TipoRespuesta = $("#A").attr("class"); //Se captura, en la variable, la class de la pregunta correspondiente en el XML.
+                var TipoRespuesta = $("#A").attr("class"); //Se captura, en la variable, la "class" de la pregunta correspondiente en el XML.
                    
                 if (TipoRespuesta == "Correcta") { //Si el valor capturado corresponde a respuesta "correcta" se incrementa en 1 el contador de respuestas. 
                     ContadorCorrectas++;
@@ -60,7 +63,7 @@
                 
             if (resultadoB == 'on') {      //Si el valor capturado en la variable antes declarada es "on" se realiza el código dentro de llaves.
                     
-                var TipoRespuesta = $("#B").attr("class"); //Se captura, en la variable, la class de la pregunta correspondiente en el XML.
+                var TipoRespuesta = $("#B").attr("class"); //Se captura, en la variable, la "class" de la pregunta correspondiente en el XML.
                     
                 if (TipoRespuesta == "Correcta") { //Si el valor capturado corresponde a respuesta "correcta" se incrementa en 1 el contador de respuestas.
                     ContadorCorrectas++;
@@ -69,7 +72,7 @@
                                 
             if (resultadoC == 'on') {     //Si el valor capturado en la variable antes declarada es "on" se realiza el código dentro de llaves.
                     
-                var TipoRespuesta = $("#C").attr("class"); //Se captura, en la variable, la class de la pregunta correspondiente en el XML.
+                var TipoRespuesta = $("#C").attr("class"); //Se captura, en la variable, la "class" de la pregunta correspondiente en el XML.
                     
                 if (TipoRespuesta == "Correcta") { //Si el valor capturado corresponde a respuesta "correcta" se incrementa en 1 el contador de respuestas.
                     ContadorCorrectas++;
